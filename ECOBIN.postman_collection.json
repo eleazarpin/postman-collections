@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "582256b6-69ae-4b52-97f1-9d3e95d450bd",
+		"name": "ECOBIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Get Usurios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/usuarios/",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Usurio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"usuario\": \"Alex\",\r\n        \"clave\": \"alex123\",\r\n        \"nombre\": \"Alex\",\r\n        \"apellido\": \"Serrano\",\r\n        \"email\": null,\r\n        \"rol\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{hostaddres}}/usuarios/",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Centro",
+			"item": [
+				{
+					"name": "Get Centros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/centros/",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"centros",
+								""
+							],
+							"query": [
+								{
+									"key": "term",
+									"value": "mejor",
+									"disabled": true
+								},
+								{
+									"key": "material",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "coord",
+									"value": "-34.649520,-58.550703",
+									"disabled": true
+								},
+								{
+									"key": "municipio",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Centro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/centros/5",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"centros",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Centros",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\":\"El mejor centro\",\n\t\"calle\":\"Calle Falsa\",\n\t\"numero\":123,\n\t\"lat\":\"-35.669520\",\n\t\"lng\":\"-58.560703\",\n\t\"descripcion\":\"\",\n\t\"materiales\":[1,2,3],\n\t\"horarios\": [\n\t\t{\n\t\t\t\"dia_semana\":1,\n\t\t\t\"hora_apertura\":\"10:00\",\n\t\t\t\"hora_cierre\": \"11:00\"\n\t\t},\n\t\t{\n\t\t\t\"dia_semana\":2,\n\t\t\t\"hora_apertura\":\"10:00\",\n\t\t\t\"hora_cierre\": \"11:00\"\n\t\t},\n\t\t{\n\t\t\t\"dia_semana\":3,\n\t\t\t\"hora_apertura\":\"10:00\",\n\t\t\t\"hora_cierre\": \"11:00\"\n\t\t},\n\t\t{\n\t\t\t\"dia_semana\":4,\n\t\t\t\"hora_apertura\":\"10:00\",\n\t\t\t\"hora_cierre\": \"11:00\"\n\t\t},\n\t\t{\n\t\t\t\"dia_semana\":5,\n\t\t\t\"hora_apertura\":\"10:00\",\n\t\t\t\"hora_cierre\": \"11:00\"\n\t\t}\n\t\t],\n\t\"municipio_id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{hostaddres}}/centros/",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"centros",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Centro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/centros/1",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"centros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Informacion",
+			"item": [
+				{
+					"name": "Get Informacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/informaciones/",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"informaciones",
+								""
+							],
+							"query": [
+								{
+									"key": "term",
+									"value": "mejor",
+									"disabled": true
+								},
+								{
+									"key": "material",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Informacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/informaciones/5",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"informaciones",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post informaciones",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"titulo\":\"Estas son segundas instrucciones para trabajar\",\n\t\"dificultad\":2,\n\t\"descripcion\":\"Estaas son las instruccione faciles, un tutorial rapido y corto\",\n\t\"materiales\":[3,4]\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{hostaddres}}/informaciones/",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"informaciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Centro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/centros/1",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"centros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Material",
+			"item": [
+				{
+					"name": "Get One Material",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/materiales/1",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"materiales",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Materiales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{hostaddres}}/materiales/",
+							"protocol": "http",
+							"host": [
+								"{{hostaddres}}"
+							],
+							"path": [
+								"materiales",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Post Indentificador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/braian.fritz/Desktop/Imagenes/descarga.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{hostaddres}}/identificador",
+					"protocol": "http",
+					"host": [
+						"{{hostaddres}}"
+					],
+					"path": [
+						"identificador"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
